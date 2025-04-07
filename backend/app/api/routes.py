@@ -8,7 +8,10 @@ import uuid
 
 router = APIRouter()
 
+# @router.post("/process_upload/")
+# @router.post("/process_link")
 @router.post("/process_upload/")
+
 async def process_uploaded_video(
     file: UploadFile = File(...),
     target_lang: str = Form(...),
@@ -25,7 +28,7 @@ async def process_uploaded_video(
         "video_file": final_path if burn_subs else None
     }
 
-@router.post("/process_link/")
+@router.post("/process_link")
 async def process_video_from_link(
     url: str = Form(...),
     target_lang: str = Form(...),

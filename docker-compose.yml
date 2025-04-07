@@ -3,7 +3,7 @@
 
 ### 📄 File: `docker-compose.yml`
 
-```yaml
+# yaml 
 version: '3.8'
 
 services:

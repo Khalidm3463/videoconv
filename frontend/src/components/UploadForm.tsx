@@ -30,7 +30,7 @@ const UploadForm = () => {
     form.append('target_lang', language)
     form.append('burn_subs', String(burn))
 
-    const res = await axios.post('/api/process_link/', form)
+    const res = await axios.post('/api/process_link', form)
     navigate('/result', { state: res.data })
   }
 
